@@ -140,7 +140,7 @@ func setupReleaseContext(ctx *context.Context, options releaseOpts) {
 		ctx.Snapshot = true
 	}
 	ctx.SkipPublish = ctx.Snapshot || options.skipPublish
-	ctx.SkipAnnounce = ctx.Snapshot || options.skipPublish || options.skipAnnounce
+	ctx.SkipAnnounce = options.skipAnnounce
 	ctx.SkipValidate = ctx.Snapshot || options.skipValidate
 	ctx.SkipSign = options.skipSign
 	ctx.SkipSBOMCataloging = options.skipSBOMCataloging
